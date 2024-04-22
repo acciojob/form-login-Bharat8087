@@ -1,8 +1,9 @@
 function getFormvalue() {
     //Write your code here
 
-    var firstName = document.getElementById("firstName").value;
-    var lastName = document.getElementById("lastName").value;
+    
+    var firstName = document.getElementsByName("fname")[0].value;
+    var lastName = document.getElementsByName("lname")[0].value;
 
     if (firstName !== "" && lastName !== "") {
         var fullName = firstName + " " + lastName;
@@ -10,11 +11,4 @@ function getFormvalue() {
     } else {
         alert("Please fill in both First Name and Last Name fields.");
     }
-}
-
-document.getElementById("myForm").addEventListener("submit", function(event) {
-    event.preventDefault();
-    getFormvalue();
-});
-
 }
